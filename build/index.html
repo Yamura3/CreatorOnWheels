@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sm:scroll-smooth">
+<html lang="en" class="sm:scroll-smooth" data-theme="light">
 <head>
     <script>
         // Set the initial theme based on local storage or system preference
@@ -39,23 +39,23 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/logo.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/COW.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="../src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <title>COW</title>
+    <title>Creator On Wheels</title>
 </head>
-<body class="bg-white-50 dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900">
     <header class="bg-white dark:bg-gray-800 shadow-lg fixed w-[calc(100%-2rem)] top-4 left-4 right-4 mx-auto z-50 transition-colors duration-300 rounded-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
             
             <!-- Theme Changer Icon -->
-            <div class="absolute left-4 flex items-center">
+            <div class="absolute left-4 flex items-center border-2 rounded-xl border-secondary">
                 <input id="lightSwitch" type="checkbox" class="light-switch sr-only" onclick="toggleTheme()" />
                 <label for="lightSwitch" class="relative cursor-pointer p-2">
                     <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-slate-300" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
-                        <path class="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                        <path class="fill-slate-600" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                        <path class="fill-slate-800" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
                     </svg>
                     <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                         <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
@@ -67,7 +67,7 @@
 
             <!-- Center Section -->
             <div class="flex-shrink-0 flex items-center">
-                <img class="h-8 w-auto" src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" alt="Logo">
+                <img class="h-8 w-auto" src="./assets/COW.png" alt="Logo">
                 <span class="ml-2 text-xl font-bold text-black dark:text-primary">Creator On Wheels</span>
             </div>
 
@@ -75,71 +75,86 @@
             <div class="flex space-x-6 ml-auto">
                 <!-- Dropdown Button for Features -->
                 <div class="relative dropdown">
-                    <button onclick="toggleDropdown('1Dropdown')" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-0" aria-expanded="false">
+                    <button 
+                        onclick="toggleDropdown('1Dropdown')" 
+                        data-dropdown="1Dropdown" 
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-0"
+                        aria-expanded="false"
+                    >
                         <span>Features</span>
-                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        <svg 
+                            class="dropdown-arrow transition-transform duration-300 ease-in-out transform" 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            height="24px" 
+                            viewBox="0 -960 960 960" 
+                            width="24px" 
+                            fill="#e8eaed"
+                        >
+                            <path d="M480-360 280-560h400L480-360Z"/>
                         </svg>
                     </button>
                     <div id="1Dropdown" class="dropdown-content hidden opacity-0 scale-95 transition-all duration-200 transform origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5">
                         <div class="py-1" role="features" aria-orientation="vertical">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">About Us</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Services</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Products</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Thumbnail Assets</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">SFX Library</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Audio Library</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Font Library</a>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
 
                 <!-- Dropdown Button for Resources -->
                 <div class="relative dropdown">
                     <button onclick="toggleDropdown('2Dropdown')" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-0" aria-expanded="false">
                         <span>Resources</span>
-                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360 280-560h400L480-360Z"/></svg>
                     </button>
                     <div id="2Dropdown" class="dropdown-content hidden opacity-0 scale-95 transition-all duration-200 transform origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5">
                         <div class="py-1" role="resources" aria-orientation="vertical">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Blog</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Webinars</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Documentation</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Tutorial</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Discord Servers</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Copyright Checker</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Button for Other -->
+                <div class="relative dropdown">
+                    <button onclick="toggleDropdown('3Dropdown')" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-0" aria-expanded="false">
+                        <span>Other</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                    </button>
+                    <div id="3Dropdown" class="dropdown-content hidden opacity-0 scale-95 transition-all duration-200 transform origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5">
+                        <div class="py-1" role="contact" aria-orientation="vertical">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Other Assets</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Dropdown Button for Contact -->
                 <div class="relative dropdown">
-                    <button onclick="toggleDropdown('3Dropdown')" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-0" aria-expanded="false">
-                        <span>Contact</span>
-                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="3Dropdown" class="dropdown-content hidden opacity-0 scale-95 transition-all duration-200 transform origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5">
-                        <div class="py-1" role="contact" aria-orientation="vertical">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Get In Touch</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Location</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dropdown Button for Support -->
-                <div class="relative dropdown">
                     <button onclick="toggleDropdown('4Dropdown')" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-0" aria-expanded="false">
-                        <span>Support</span>
-                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <span>Contact</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360 280-560h400L480-360Z"/></svg>
                     </button>
                     <div id="4Dropdown" class="dropdown-content hidden opacity-0 scale-95 transition-all duration-200 transform origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5">
                         <div class="py-1" role="support" aria-orientation="vertical">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">FAQ</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Help Center</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Feedback</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Report A Bug</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600" role="menuitem">Contact us</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <main>
+        <div class="bg-gradient-to-r from-left to-right pt-40 pb-10"> <!-- Blue CTA Banner -->
+            <h1 class="text-primary text-6xl font-extrabold text-center">Unleash Your Creativity</h1>
+            <p class="text-white text-lg text-center pt-10">Access thousands of free, high-quality assets for your content creation needs</p>
+            <a class="pt-5 text-center flex justify-center items-center" href="/get-started"><button class="flex justify-center items-center btn">Get Started - It's free</button></a>
+        </div>
+    </main>
+    <script src="./scripts.js"></script>
 </body>
 </html>

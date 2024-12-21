@@ -32,3 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('dark-mode', isDark);
     });
 });
+
+function toggleDropdown(dropdownId) {
+    // Close all other dropdowns
+    const allDropdowns = document.querySelectorAll('.dropdown-content');
+    allDropdowns.forEach(dropdown => {
+        if (dropdown.id !== dropdownId) {
+            dropdown.classList.add('hidden', 'opacity-0', 'scale-95');
+            dropdown.classList.remove('opacity-100', 'scale-100');
+        }
+    });
+
+    // Get the clicked dropdown
+    const dropdown = document.getElementById(dropdownId);
+
+    // Toggle classes for showing/hiding the dropdown
+    if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden', 'opacity-0', 'scale-95');
+        dropdown.classList.add('opacity-100', 'scale-100');
+    } else {
+        dropdown.classList.add('hidden', 'opacity-0', 'scale-95');
+        dropdown.classList.remove('opacity-100', 'scale-100');
+    }
+}

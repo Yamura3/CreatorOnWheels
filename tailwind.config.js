@@ -8,8 +8,7 @@ module.exports = {
   ],
   // Add TailwindCSS plugins if needed (e.g., forms, typography, etc.)
   plugins: [
-    require("flyonui"),           // Add FlyonUI CSS utilities
-    require("flyonui/plugin"),     // Add FlyonUI JS functionality (optional)
+    require("tailwindcss-motion"),
   ],
   theme: {
     extend: {
@@ -30,11 +29,6 @@ module.exports = {
         'right': "#534DE7",
       },
     },
-  },
-  // FlyonUI custom settings if you need to generate vendor-specific CSS
-  flyonui: {
-    vendors: true,  // Enable vendor-specific CSS generation (if required)
-    themes: ["light", "dark"]
   },
   darkMode: ['class'],  // Enables dark mode using a class
 };

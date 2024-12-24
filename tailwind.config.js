@@ -2,11 +2,11 @@
 module.exports = {
   content: [
     "./node_modules/flyonui/dist/js/*.js", // FlyonUI JS components (if using JS)
-    "./build/*.html",                    // Scan your HTML files for Tailwind classes
+    "./build/*.html",
+    "./build/*.js",                    // Scan your HTML files for Tailwind classes
     "./src/**/*.html",                   // If you have files in src folder, add them as well
     "./src/**/*.js",                     // Add JS files to include Tailwind CSS classes in JS files
   ],
-  // Add TailwindCSS plugins if needed (e.g., forms, typography, etc.)
   plugins: [
     require("tailwindcss-motion"),
   ],

@@ -151,29 +151,56 @@
     </header>
     <main>
         <div class="bg-gradient-to-r from-left to-right pt-40 pb-11 flex flex-col items-center">
-            <h1 class="text-primary text-6xl font-extrabold text-center dark:text-gray-950">Useful Content Creation Discord Servers</h1>
-            <p class="text-white text-lg text-center pt-10 dark:text-gray-900 font-semibold">Servers regarding all topics within content creation: unlock more assets, tools and a helpful community</p>
+            <h1 class="text-primary text-6xl font-extrabold text-center dark:text-gray-950">Useful Content Creation Assets</h1>
+            <p class="text-white text-lg text-center pt-10 dark:text-gray-900 font-semibold">Hundreds of free, high-quality images, music and sound effects to suit your content creation needs</p>
         </div>
+        <div class="bg-gray-50 min-h-screen p-8"">
         <div class="bg-primary dark:bg-black pt-5 pb-5 align-middle items-center space-x-6 px-5"> <!-- thumbnail section -->
-            <div>
-                <h2 class="text-center text-black dark:text-primary text-4xl font-bold">Thumbnails</h2>
-                <p class="pb-3 text-center pt-3 dark:text-gray-300 text-black">the best tutorials to make the most stunning thumbnails</p>
-                <div data-key="Thumbnail COW" class="ft" id="ft94aqas7">
+            <div class="max-w-7xl mx-auto pt-1">
+                <div class="mb-8 pb-5 motion-scale-in-[0.75]"> <!-- search bar -->
+                    <input type="text"
+                           id="searchInput" 
+                           placeholder="Search assets..." 
+                           class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    >
                 </div>
-                <script src="https://cdn.fouita.com/widgets/0x1d5770.js"></script>
-            </div>
-            <div class="pt-5">
-                <h2 class="text-center text-black dark:text-primary text-4xl font-bold">Editing</h2>
-                <p class="pb-3 text-center pt-3 dark:text-gray-300 text-black">the best tutorials to make the most stunning thumbnails</p>
-                <div data-key="Editing COW" class="ft pb-2" id="ft12f6jy8">
+        
+                <!-- Tabs -->
+                <div class="mb-6 text-center">
+                    <div class="border-b border-gray-200">
+                        <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                            <button 
+                                class="tab-button border-blue-500 text-center text-blue-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" 
+                                data-tab="thumbnails"
+                                aria-current="page">
+                                Thumbnails
+                            </button>
+                            <button 
+                                class="tab-button border-transparent text-center text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" 
+                                data-tab="sfx">
+                                SFX
+                            </button>
+                            <button 
+                                class="tab-button border-transparent text-center text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" 
+                                data-tab="music">
+                                Music
+                            </button>
+                        </nav>
+                    </div>
                 </div>
-                <script src="https://cdn.fouita.com/widgets/0x1d5e85.js"></script>
+        
+                <!-- Asset Grid -->
+                <div id="assetGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Cards will be inserted here by JavaScript :) -->
+                </div>
             </div>
         </div>
+    </div>
     </main>
     <footer class="bg-gradient-to-r from-left to-right text-white text-center pt-11.5 pb-11">
         <p class="pt-5">Website made by <u>Yamura</u><br>&copy; 2024 <bold>C</bold>reator <bold>O</bold>n <bold>W</bold>heels</p>
     </footer>
-    <script src="./scripts.js"></script>
+    <script src="./data/assets.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
